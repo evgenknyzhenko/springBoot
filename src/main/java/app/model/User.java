@@ -21,6 +21,8 @@ public class User {
     private String password;
     @Column(name = "TOKEN")
     private String token;
+    @Column(name = "ENABLED")
+    private Boolean enabled = true;
 
 
 

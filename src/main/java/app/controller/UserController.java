@@ -25,4 +25,11 @@ public class UserController {
     public List<User> getAll() {
         return userService.getAll();
     }
+
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    public User addUser(@RequestBody User user){
+        return userService.addUser(user);
+    }
+
+
 }

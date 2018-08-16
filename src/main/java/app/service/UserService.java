@@ -9,4 +9,6 @@ public interface UserService {
     List<User> getAll();
 
     User getByEmail(String email);
+
+    User addUser(User user);
 }
