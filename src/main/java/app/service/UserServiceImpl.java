@@ -7,6 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -18,8 +19,8 @@ public class UserServiceImpl implements UserService {
     private BCryptPasswordEncoder encoder;
 
     @Override
-    public List<User> getAll() {
-        return userRepository.findAll();
+    public Optional<List<User>> getAll() {
+        return Optional.ofNullable(userRepository.findAll());
     }
 
     @Override
